@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: mock_league
+  pool: 5
+  username: postgres
+  password: olamilekan
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: mock_league_test
+  pool: 5
+  username: postgres
+  password: olamilekan
+  timeout: 5000
