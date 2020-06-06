@@ -10,14 +10,14 @@ class TeamsController < ApplicationController
 
   # POST /teams
   def create
-    team = Team.create!(team_params)
-    json_response(team, "Team created successfully", :created)
+    @team = Team.create!(team_params)
+    json_response(@team, "Team created successfully", :created)
   end
 
   # GET /teams
   def index
-    teams = Team.all
-    json_response(teams, "Teams fetched successfully")
+    @teams = Team.all
+    json_response(@teams, "Teams fetched successfully")
   end
 
   # GET /teams/:id
@@ -27,14 +27,14 @@ class TeamsController < ApplicationController
 
   # DELETE /teams/:id
   def destroy
-    team = Team.destroy(params[:id])
-    json_response(team, "Team deleted successfully")
+    @team = Team.destroy(params[:id])
+    json_response(@team, "Team deleted successfully")
   end
 
   # PUT /teams/:id
   def update
-    team = set_team.update(team_params)
-    json_response(team, "Team updated successfully")
+    @team = set_team.update(team_params)
+    json_response(@team, "Team updated successfully")
   end
 
 
