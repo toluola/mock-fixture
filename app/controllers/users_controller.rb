@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authorize_user, only: [:user_login, :create]
+  skip_before_action :authorize_user, :check_admin, only: [:user_login, :create]
   include Response
   include ExceptionHandler
 

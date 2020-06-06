@@ -1,6 +1,12 @@
 class TeamsController < ApplicationController
+  skip_before_action :check_admin, only: [:index]
   include Response
   include ExceptionHandler
+
+  # GET root route action
+  def root
+    json_response({ message: "Welcome to the base URL"}, "This is the base URL")
+  end
 
   # POST /teams
   def create

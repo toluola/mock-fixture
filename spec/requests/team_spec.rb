@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Product API", type: :request do
+RSpec.describe "Teams API", type: :request do
   let!(:user) { create(:user) }
   let!(:team) { create(:team) }
   let(:team_id) { team.id }
