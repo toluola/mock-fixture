@@ -4,7 +4,6 @@ rvm:
 env:
   - DB=postgresql
   - SECRET=WHOAREYOU
-  - BASE_URL=baseurl
 services:
   - postgresql
 install: bundle install
