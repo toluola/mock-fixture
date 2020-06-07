@@ -3,7 +3,8 @@ rvm:
   - 2.7.1
 env:
   - DB=postgresql
-  - SECRET=WHOAREYOU!@#
+  - SECRET=WHOAREYOU
+  - BASE_URL=https://mock-teams.herokuapp.com/
 services:
   - postgresql
 install: bundle install
