@@ -1,6 +1,14 @@
 language: ruby
 rvm:
   - 2.7.1
+env:
+  - DB=postgresql
+services:
+  - postgresql
 install: bundle install
 script:
+  - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
   - bundle exec rspec --format doc
+before_script:
+  - cp config/database.travis.yml config/database.yml
+  - psql -c 'create database mydb_test;' -U postgres
