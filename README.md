@@ -1,4 +1,5 @@
 # Mock Premier League API
+[![Build Status](https://travis-ci.org/toluola/mock-fixture.svg?branch=master)](https://travis-ci.org/toluola/mock-fixture) [![codecov](https://codecov.io/gh/toluola/mock-fixture/branch/master/graph/badge.svg)](https://codecov.io/gh/toluola/mock-fixture)
 
 This API serves the latest scores of fixtures of matches in a “Mock Premier League”.
 
