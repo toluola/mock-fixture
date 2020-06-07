@@ -1,5 +1,3 @@
-# README
-
 # Mock Premier League API
 
 This API serves the latest scores of fixtures of matches in a “Mock Premier League”.
