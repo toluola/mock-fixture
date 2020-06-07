@@ -4,7 +4,7 @@ rvm:
 env:
   - DB=postgresql
   - SECRET=WHOAREYOU
-  - BASE_URL=https://mock-teams.herokuapp.com/
+  - BASE_URL=baseurl
 services:
   - postgresql
 install: bundle install
