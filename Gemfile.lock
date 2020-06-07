@@ -79,6 +79,7 @@ GEM
       thor (>= 0.14.0, < 2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hiredis (0.6.3)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     jwt (2.2.1)
@@ -108,6 +109,10 @@ GEM
     puma (4.3.5)
       nio4r (~> 2.0)
     rack (2.2.2)
+    rack-attack (6.3.1)
+      rack (>= 1.0, < 3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.0.3.1)
@@ -140,6 +145,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (4.1.4)
     rspec-core (3.9.2)
       rspec-support (~> 3.9.3)
     rspec-expectations (3.9.2)
@@ -194,12 +200,16 @@ DEPENDENCIES
   factory_bot_rails (~> 4.0)
   faker
   figaro
+  hiredis
   jwt
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   pg_search
   puma (~> 4.1)
+  rack-attack
+  rack-cors
   rails (~> 6.0.3)
+  redis (~> 4.0)
   rspec-rails (~> 3.5)
   shoulda-matchers (~> 3.1)
   simplecov

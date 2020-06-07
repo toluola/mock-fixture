@@ -16,7 +16,9 @@ class TeamsController < ApplicationController
 
   # GET /teams
   def index
-    @teams = Team.all
+    @teams = Rails.cache.fetch('method_name', :expires_in => 1.hours) {
+       Team.all
+    }
     json_response(@teams, "Teams fetched successfully")
   end
 
