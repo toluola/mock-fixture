@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Mock Premier League API
 
-Things you may want to cover:
+This API serves the latest scores of fixtures of matches in a “Mock Premier League”.
 
-* Ruby version
+## Project Setup
 
-* System dependencies
+* Clone this repo
+* Run `bundle install`
+* Run `rails db:create`
+* Run `rails db:migrate`
+* Run `rails server`
+* Run `redis-server`
 
-* Configuration
+## Ruby version
+* 2.7.1
 
-* Database creation
+## Database
+* postgresql
 
-* Database initialization
+## Heroku server link
+`https://mock-teams.herokuapp.com`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Postman documentation link
+`https://documenter.getpostman.com/view/5586126/SztK35MD`
