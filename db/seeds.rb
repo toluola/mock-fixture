@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(email: 'toluola7@gmail.com', password: 'test123', role: 'admin')
-20.times do 
+120.times do 
   Team.create!(
     name: Faker::Team.unique.name
   )
