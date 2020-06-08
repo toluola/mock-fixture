@@ -18,6 +18,9 @@ This API serves the latest scores of fixtures of matches in a “Mock Premier Le
 ## Database
 * postgresql
 
+## Testing
+* run `rspec`
+
 ## Heroku server link
 `https://mock-teams.herokuapp.com`
 
