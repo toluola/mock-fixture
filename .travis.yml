@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.7.1
 env:
-  - DB=postgresql SECRET=WHOAREYOU
+  - DB=postgresql SECRET=WHOAREYOU BASE_URL=baseurl
 services:
   - postgresql
 install: bundle install
