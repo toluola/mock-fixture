@@ -5,6 +5,7 @@ env:
   - DB=postgresql SECRET=WHOAREYOU BASE_URL=baseurl
 services:
   - postgresql
+  - redis-server
 install: bundle install
 script:
   - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
