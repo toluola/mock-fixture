@@ -1,0 +1,1 @@
+$redis = Redis::Namespace.new("mock_fixtures", :redis => Redis.new)

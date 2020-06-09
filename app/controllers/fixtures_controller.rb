@@ -11,8 +11,15 @@ class FixturesController < ApplicationController
 
   # GET /fixtures
   def index
-    fixtures = Fixture.all
-    json_response(fixtures, "Fixtures fetched successfully")
+    fixtures = $redis.get("fixtures")
+
+    if fixtures.nil?
+      fixtures = Fixture.all.to_json
+      $redis.set("fixtures", fixtures)
+      $redis.expire("fixtures", 3.hour.to_i)
+    end
+    @fixtures = JSON.load fixtures
+    json_response(@fixtures, "Fixtures fetched successfully")
   end
 
   # GET /fixtures/:id

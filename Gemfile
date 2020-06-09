@@ -21,6 +21,9 @@ gem "figaro"
 gem 'pg_search'
 gem 'faker'
 gem 'rack-attack'
+gem 'redis-namespace'
+gem 'redis-rails'
+gem 'redis-rack-cache'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -16,9 +16,14 @@ class TeamsController < ApplicationController
 
   # GET /teams
   def index
-    @teams = Rails.cache.fetch('method_name', :expires_in => 1.hours) {
-       Team.all
-    }
+    teams = $redis.get("teams")
+
+    if teams.nil?
+      teams = Team.all.to_json
+      $redis.set("teams", teams)
+      $redis.expire("teams", 3.hour.to_i)
+    end
+    @teams = JSON.load teams
     json_response(@teams, "Teams fetched successfully")
   end
 
